@@ -1,0 +1,24 @@
+<%- include('includes/head') %>
+
+    <main class="container-principal">
+        <h1>
+            <%= titulo %>
+
+           <!--  <% if ( typeof titulo !== 'undefined' ){ %>
+                <%= titulo %>
+            <% } %> -->
+
+           <!--  <% numeros.forEach(num => { %>
+                <%= num %>
+            <% }) %> -->
+        </h1>
+        
+        <form action="/" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken%>">
+            <label for="">Cliente</label>
+            <input type="text" name="cliente">
+            <button>Submit</button>
+        </form>
+    </main>
+
+<%- include('includes/footer') %>
